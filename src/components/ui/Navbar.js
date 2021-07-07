@@ -12,8 +12,8 @@ export const Navbar = () => {
                 Asociaciones
             </Link>
 
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
+            <div className="collapse navbar-collapse">
+                <div className="navbar-nav me-auto mb-2 mb-lg-0">
 
                     <NavLink 
                         activeClassName="active"
@@ -33,10 +33,7 @@ export const Navbar = () => {
                         DC
                     </NavLink>
                 </div>
-            </div>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2">
-                <ul className="navbar-nav ml-auto">
+                <span class="navbar-text">
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
@@ -45,7 +42,7 @@ export const Navbar = () => {
                     >
                         Logout
                     </NavLink>
-                </ul>
+                </span>
             </div>
         </nav>
     )
