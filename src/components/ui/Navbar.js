@@ -33,7 +33,7 @@ export const Navbar = () => {
                         DC
                     </NavLink>
                 </div>
-                <span class="navbar-text">
+                <span className="navbar-text">
                     <NavLink 
                         activeClassName="active"
                         className="nav-item nav-link" 
