@@ -29,6 +29,12 @@ export const HeroScreen = ({history}) => {
         }
     }
 
+    // img background
+    // style={{ 
+    //     backgroundImage: `url(../assets/heroes/${ heroeId }.jpg)`,
+    //     backgroundRepeat: 'no-repeat',
+    //     backgroundSize: '100vh 100vw'
+    // }}
     return (
         <div className="row mt-5">
             <div className="col-5 animate__animated animate__bounce animate__fadeInLeft">
