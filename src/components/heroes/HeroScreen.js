@@ -21,19 +21,20 @@ export const HeroScreen = ({history}) => {
     } = hero;
 
     const handleReturn = () => {
-        if (history.length <= 2) {
+        // history.goBack();
+        if (history.length <= 1) {
             history.push();
         } else {
-            history.goBack()
+            history.goBack();
         }
     }
 
     return (
         <div className="row mt-5">
-            <div className="col-4">
+            <div className="col-5 animate__animated animate__bounce animate__fadeInLeft">
                 <img src={ `../assets/heroes/${ heroeId }.jpg` } className="img-thumbnail" alt={ hero } />
             </div>
-            <div className="col-8">
+            <div className="col-7 animate__animated animate__bounce animate__fadeInRight">
                 <h3>{ superhero }</h3>
                 <ul className="list-group list-group-flush">
                     <li className="list-group-item"><b>Alter ego: </b>{ alter_ego }</li>
