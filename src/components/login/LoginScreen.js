@@ -9,13 +9,14 @@ export const LoginScreen = ({ history }) => {
 
     const handleLogin = () => {
         // history.push('/');
+        const lastLocation = localStorage.getItem('lastLocation') || '/'
         dispatch({
             type : types.login, 
             payload: {
                 name: 'Victor'
             }
         });
-        history.replace('/');
+        history.replace(lastLocation);
     }
 
     return (
