@@ -58,7 +58,7 @@ export const Navbar = () => {
                         Search
                     </NavLink>
                 </div>
-                <span className="navbar-text">
+                <span className="navbar-text text-info">
                     { user.name }
                 </span>
                 <span className="navbar-text">
