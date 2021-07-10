@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { Redirect, useParams } from 'react-router-dom'
 import { getHeroById } from '../../selectors/getHeroesById';
+const heroImages = require.context('../../assets/heroes', true );
 
 export const HeroScreen = ({history}) => {
 
@@ -28,7 +29,7 @@ export const HeroScreen = ({history}) => {
             history.goBack();
         }
     }
-
+    
     // img background
     // style={{ 
     //     backgroundImage: `url(../assets/heroes/${ heroeId }.jpg)`,
@@ -38,7 +39,7 @@ export const HeroScreen = ({history}) => {
     return (
         <div className="row mt-5">
             <div className="col-5 animate__animated animate__bounce animate__fadeInLeft">
-                <img src={ `../assets/heroes/${ heroeId }.jpg` } className="img-thumbnail" alt={ hero } />
+                <img src={ heroImages(`./${ heroeId }.jpg`).default } className="img-thumbnail" alt={ hero } />
             </div>
             <div className="col-7 animate__animated animate__bounce animate__fadeInRight">
                 <h3>{ superhero }</h3>

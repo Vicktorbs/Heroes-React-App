@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+const heromImages = require.context('../../assets/heroes', true)
 
 export const HeroCard = ({
     id,
@@ -13,7 +14,7 @@ export const HeroCard = ({
             <div className="card">
                 <div className="row">
                     <div className="col-md-4">
-                        <img src={ `./assets/heroes/${ id }.jpg` } className="card-img-top" alt={ superhero } />
+                        <img src={ heromImages(`./${ id }.jpg`).default } className="card-img-top" alt={ superhero } />
                     </div>
                     <div className="col-md-8">
                         <div className="card-body">

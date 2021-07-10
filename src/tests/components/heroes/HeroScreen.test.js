@@ -73,7 +73,7 @@ describe('Test on <HeroScreen /> componet', () => {
     test('should call redirect if hero does not exist', () => {
         
         const wrapper = mount(
-            <MemoryRouter initialEntries={['/hero/dc-wonderkki']}>
+            <MemoryRouter initialEntries={['/hero/dc-wonder']}>
                 <Route path="/hero/:heroeId" component={() => <HeroScreen history={ history } /> } />
             </MemoryRouter>
         )
